@@ -309,3 +309,10 @@ body.modal-open {
     transition-duration: .01ms !important;
   }
 }
+
+
+.offers-swiper { width: 100%; max-width: 100%; }
+
+@media (max-width: 639px) {
+  .offers-swiper { overflow: hidden; }
+}

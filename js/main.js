@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Offers slider
   const offersSwiper = new Swiper('.offers-swiper', {
-    slidesPerView: 1.08,
+    slidesPerView: 1,
     spaceBetween: 16,
     speed: 700,
     grabCursor: true,
