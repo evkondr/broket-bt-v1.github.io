@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="БРОКЕР-БТ — профессиональный подбор бытовой и встраиваемой техники для дома.">
+  <title>БРОКЕР-БТ — персональный гид в мире бытовой техники</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          },
+          colors: {
+            ink: '#171717',
+            graphite: '#272727',
+            smoke: '#737373',
+            line: '#e5e5e5',
+            paper: '#f7f7f5'
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-paper text-ink antialiased">
+  <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+    <div class="mx-auto max-w-7xl px-5 lg:px-8">
+      <div class="flex h-20 items-center justify-between">
+        <a href="#hero" class="shrink-0" aria-label="БРОКЕР-БТ — на главную">
+          <img src="img/logo.png" alt="БРОКЕР-БТ" class="h-12 w-auto object-contain">
+        </a>
+
+        <nav class="hidden items-center gap-8 md:flex" aria-label="Основная навигация">
+          <a class="nav-link" href="#about">О проекте</a>
+          <a class="nav-link" href="#brands">Бренды</a>
+          <a class="nav-link" href="#offers">Акции</a>
+          <a class="nav-link" href="#contacts">Контакты</a>
+        </nav>
+
+        <button id="menu-toggle" type="button"
+                class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/40 text-white md:hidden"
+                aria-label="Открыть меню" aria-expanded="false">
+          <span class="menu-icon"><i></i><i></i><i></i></span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="pointer-events-none absolute inset-x-0 top-20 translate-y-[-10px] border-b border-neutral-200 bg-white opacity-0 shadow-xl transition-all duration-300 md:hidden">
+      <nav class="flex flex-col p-5" aria-label="Мобильная навигация">
+        <a class="mobile-nav-link" href="#about">О проекте</a>
+        <a class="mobile-nav-link" href="#brands">Бренды</a>
+        <a class="mobile-nav-link" href="#offers">Акции</a>
+        <a class="mobile-nav-link" href="#contacts">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="relative flex min-h-screen items-center overflow-hidden bg-neutral-900">
+      <div class="hero-parallax absolute inset-[-8%] bg-cover bg-center"
+           style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=85');"></div>
+      <div class="absolute inset-0 bg-black/55"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/65"></div>
+
+      <div class="relative z-10 mx-auto w-full max-w-7xl px-5 pb-16 pt-32 lg:px-8">
+        <div class="max-w-4xl">
+          <p class="hero-eyebrow mb-5 text-sm font-medium uppercase tracking-[0.35em] text-white/65">
+            Подбор бытовой техники
+          </p>
+
+          <h1 class="hero-title text-5xl font-semibold tracking-[-0.04em] text-white sm:text-6xl lg:text-8xl">
+            БРОКЕР-БТ
+          </h1>
+
+          <div class="my-7 flex items-center gap-4">
+            <span class="h-px w-16 bg-white/60 sm:w-24"></span>
+            <span class="h-1.5 w-1.5 rounded-full bg-white/80"></span>
+            <span class="h-px flex-1 max-w-sm bg-white/25"></span>
+          </div>
+
+          <p class="hero-subtitle max-w-2xl text-xl leading-relaxed text-white/90 sm:text-2xl lg:text-3xl">
+            Ваш персональный гид в мире бытовой техники
+          </p>
+
+          <a href="#contacts" class="hero-button mt-9 inline-flex items-center gap-4 rounded-full bg-white px-7 py-4 text-sm font-semibold text-neutral-900 transition hover:-translate-y-1 hover:bg-neutral-100">
+            Подобрать технику
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <a href="#about" class="absolute bottom-7 left-1/2 z-10 hidden -translate-x-1/2 items-center gap-3 text-xs uppercase tracking-[0.25em] text-white/60 transition hover:text-white sm:flex">
+        <span>Листайте</span>
+        <span class="scroll-line"></span>
+      </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section-reveal overflow-hidden bg-paper py-20 sm:py-28 lg:py-36">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="mb-14 max-w-3xl lg:mb-20">
+          <p class="section-kicker">01 / О проекте</p>
+          <h2 class="mt-4 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl lg:text-6xl">
+            Техника, которую выбирают с уверенностью.
+          </h2>
+        </div>
+
+        <div class="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
+          <div>
+            <p class="text-xl leading-relaxed text-neutral-700 sm:text-2xl">
+              БРОКЕР-БТ — профессиональный сервис по подбору бытовой и встраиваемой техники,
+              предоставляющий услуги полного цикла.
+            </p>
+
+            <div class="mt-10 grid gap-5 sm:grid-cols-2">
+              <div class="feature-card">
+                <span class="feature-number">01</span>
+                <h3>Индивидуальный подбор</h3>
+                <p>Экспертные консультации — бесплатная опция.</p>
+              </div>
+              <div class="feature-card">
+                <span class="feature-number">02</span>
+                <h3>Персональное предложение</h3>
+                <p>Подбираем решения с учетом ваших задач и бюджета.</p>
+              </div>
+              <div class="feature-card">
+                <span class="feature-number">03</span>
+                <h3>Широкий ассортимент</h3>
+                <p>Бренды ведущих производителей в наличии.</p>
+              </div>
+              <div class="feature-card">
+                <span class="feature-number">04</span>
+                <h3>Сервис 24/7</h3>
+                <p>Гарантийное и постпродажное сопровождение.</p>
+              </div>
+            </div>
+
+            <p class="mt-10 max-w-3xl leading-relaxed text-neutral-600">
+              Также доступны акции и промо предложения, бесплатная доставка.
+              Выполняем комплексное оснащение объектов любого уровня «под ключ».
+              Сотрудничаем с архитекторами, дизайнерами интерьеров и производителями
+              корпусной мебели. Реализуем проекты по всей территории РФ.
+            </p>
+          </div>
+
+          <aside class="relative">
+            <div class="director-card sticky top-28 overflow-hidden rounded-2xl bg-neutral-900 text-white">
+              <div class="director-photo flex aspect-[4/5] items-end bg-neutral-800"
+                   style="background-image:linear-gradient(to top,rgba(0,0,0,.75),rgba(0,0,0,.05)),url('https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1000&q=80');">
+                <div class="p-7 sm:p-9">
+                  <p class="text-xs uppercase tracking-[0.25em] text-white/50">Руководитель компании</p>
+                  <h3 class="mt-2 text-2xl font-semibold">Александр Сергеевич Назаров</h3>
+                </div>
+              </div>
+              <blockquote class="p-7 text-lg leading-relaxed text-white/80 sm:p-9">
+                «Основная задача — сделать процесс оснащения жилого помещения бытовыми
+                приборами максимально комфортным для клиентов, сэкономить их время и бюджет!
+                Высокий уровень сервиса и качественный результат — наши приоритеты.
+                Индивидуальный подход, сбалансированный ассортимент и взвешенная ценовая
+                политика позволяют закрывать любые потребности»
+              </blockquote>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRANDS -->
+    <section id="brands" class="section-reveal overflow-hidden border-y border-neutral-200 bg-white py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+          <div>
+            <p class="section-kicker">02 / Наши бренды</p>
+            <h2 class="mt-4 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">Производители</h2>
+          </div>
+          <p class="max-w-md text-sm leading-relaxed text-neutral-500">
+            Подбираем технику европейских и других ведущих производителей для дома.
+          </p>
+        </div>
+      </div>
+
+      <div class="swiper brands-swiper mt-12">
+        <div class="swiper-wrapper items-center">
+          <div class="swiper-slide brand-slide"><div class="brand-logo">BOSCH</div></div>
+          <div class="swiper-slide brand-slide"><div class="brand-logo">Miele</div></div>
+          <div class="swiper-slide brand-slide"><div class="brand-logo">SIEMENS</div></div>
+          <div class="swiper-slide brand-slide"><div class="brand-logo">NEFF</div></div>
+          <div class="swiper-slide brand-slide"><div class="brand-logo">LIEBHERR</div></div>
+          <div class="swiper-slide brand-slide"><div class="brand-logo">AEG</div></div>
+          <div class="swiper-slide brand-slide"><div class="brand-logo">SMEG</div></div>
+          <div class="swiper-slide brand-slide"><div class="brand-logo">ASKO</div></div>
+        </div>
+      </div>
+
+      <div class="mx-auto mt-8 flex max-w-7xl justify-between px-5 lg:px-8">
+        <button class="brands-prev slider-arrow" type="button" aria-label="Предыдущий бренд">←</button>
+        <button class="brands-next slider-arrow" type="button" aria-label="Следующий бренд">→</button>
+      </div>
+    </section>
+
+    <!-- OFFERS -->
+    <section id="offers" class="section-reveal bg-paper py-20 sm:py-28 lg:py-36">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+          <div>
+            <p class="section-kicker">03 / Акции</p>
+            <h2 class="mt-4 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl lg:text-6xl">Акции и предложения</h2>
+          </div>
+          <p class="max-w-md text-sm leading-relaxed text-neutral-500">
+            Актуальные предложения для тех, кто хочет получить больше от покупки техники.
+          </p>
+        </div>
+
+        <div class="swiper offers-swiper mt-12 overflow-visible">
+          <div class="swiper-wrapper">
+            <article class="swiper-slide offer-card">
+              <div class="offer-image" style="background-image:url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80')"></div>
+              <div class="p-6 sm:p-8">
+                <p class="text-xs uppercase tracking-[0.2em] text-neutral-400">Предложение 01</p>
+                <h3 class="mt-3 text-2xl font-semibold">Персональный подбор</h3>
+                <p class="mt-3 text-sm leading-relaxed text-neutral-500">Экспертная консультация и подбор техники под ваш проект.</p>
+                <button class="details-button mt-6" type="button" data-offer="0">Подробнее <span>↗</span></button>
+              </div>
+            </article>
+
+            <article class="swiper-slide offer-card">
+              <div class="offer-image" style="background-image:url('https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=1200&q=80')"></div>
+              <div class="p-6 sm:p-8">
+                <p class="text-xs uppercase tracking-[0.2em] text-neutral-400">Предложение 02</p>
+                <h3 class="mt-3 text-2xl font-semibold">Комплексное оснащение</h3>
+                <p class="mt-3 text-sm leading-relaxed text-neutral-500">Подбор техники для объектов любого уровня «под ключ».</p>
+                <button class="details-button mt-6" type="button" data-offer="1">Подробнее <span>↗</span></button>
+              </div>
+            </article>
+
+            <article class="swiper-slide offer-card">
+              <div class="offer-image" style="background-image:url('https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1200&q=80')"></div>
+              <div class="p-6 sm:p-8">
+                <p class="text-xs uppercase tracking-[0.2em] text-neutral-400">Предложение 03</p>
+                <h3 class="mt-3 text-2xl font-semibold">Бесплатная доставка</h3>
+                <p class="mt-3 text-sm leading-relaxed text-neutral-500">Уточните условия доставки выбранной техники у специалиста.</p>
+                <button class="details-button mt-6" type="button" data-offer="2">Подробнее <span>↗</span></button>
+              </div>
+            </article>
+
+            <article class="swiper-slide offer-card">
+              <div class="offer-image" style="background-image:url('https://images.unsplash.com/photo-1588854337116-1b4e0a4a3a2c?auto=format&fit=crop&w=1200&q=80')"></div>
+              <div class="p-6 sm:p-8">
+                <p class="text-xs uppercase tracking-[0.2em] text-neutral-400">Предложение 04</p>
+                <h3 class="mt-3 text-2xl font-semibold">Промо предложения</h3>
+                <p class="mt-3 text-sm leading-relaxed text-neutral-500">Специальные условия на отдельные категории техники.</p>
+                <button class="details-button mt-6" type="button" data-offer="3">Подробнее <span>↗</span></button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="mt-8 flex justify-between">
+          <button class="offers-prev slider-arrow" type="button" aria-label="Предыдущая акция">←</button>
+          <button class="offers-next slider-arrow" type="button" aria-label="Следующая акция">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTS -->
+    <section id="contacts" class="section-reveal bg-neutral-900 py-20 text-white sm:py-28 lg:py-36">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="mb-14 max-w-3xl lg:mb-20">
+          <p class="section-kicker !text-white/40">04 / Контакты</p>
+          <h2 class="mt-4 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl lg:text-6xl">
+            Подберём технику<br>под ваш проект.
+          </h2>
+        </div>
+
+        <div class="grid gap-12 lg:grid-cols-2 lg:gap-24">
+          <div>
+            <p class="mb-7 text-sm uppercase tracking-[0.2em] text-white/40">Реквизиты</p>
+            <div class="space-y-3 text-sm leading-relaxed text-white/75">
+              <p><strong class="font-medium text-white">БРОКЕР-БТ</strong> ИП Назаров Александр Сергеевич</p>
+              <p>ИНН 525714908844</p>
+              <p>ОГРНИП 322527500096924</p>
+              <p>АО «ТИНЬКОФФ БАНК»</p>
+              <p>Р/СЧ 40802810900003666191</p>
+              <p>К/СЧ 30101810145250000974</p>
+              <p>ИНН 7710140679</p>
+              <p>БИК 04452597</p>
+            </div>
+          </div>
+
+          <div>
+            <p class="mb-7 text-sm uppercase tracking-[0.2em] text-white/40">Связаться с нами</p>
+
+            <!-- В ТЗ email, телефон, адрес и режим работы не указаны,
+                 поэтому оставлены явные места для подстановки. -->
+            <div class="grid gap-6 sm:grid-cols-2">
+              <div class="contact-item">
+                <span>Email</span>
+                <a href="mailto:УКАЖИТЕ_EMAIL" class="text-lg text-white/90 hover:text-white">Укажите email</a>
+              </div>
+              <div class="contact-item">
+                <span>Телефон</span>
+                <a href="tel:+70000000000" class="text-lg text-white/90 hover:text-white">Укажите телефон</a>
+              </div>
+              <div class="contact-item">
+                <span>Адрес</span>
+                <p class="text-lg text-white/90">Укажите адрес</p>
+              </div>
+              <div class="contact-item">
+                <span>Режим работы</span>
+                <p class="text-lg text-white/90">Укажите режим работы</p>
+              </div>
+            </div>
+
+            <div class="mt-10 flex flex-wrap gap-3">
+              <a href="#" class="social-button">Telegram <span>↗</span></a>
+              <a href="#" class="social-button">WhatsApp <span>↗</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-neutral-950 text-white">
+    <div class="mx-auto max-w-7xl px-5 py-12 lg:px-8">
+      <div class="grid gap-10 lg:grid-cols-[1.4fr_0.6fr_0.8fr]">
+        <div>
+          <img src="img/logo.png" alt="БРОКЕР-БТ" class="h-12 w-auto object-contain">
+          <p class="mt-6 max-w-md text-sm leading-relaxed text-white/45">
+            Ваш персональный гид в мире бытовой техники.
+            Профессиональный подбор и комплексное оснащение объектов любой сложности.
+          </p>
+        </div>
+
+        <nav class="flex flex-col gap-3 text-sm text-white/55" aria-label="Навигация в подвале">
+          <a href="#about" class="footer-link">О проекте</a>
+          <a href="#brands" class="footer-link">Бренды</a>
+          <a href="#offers" class="footer-link">Акции</a>
+          <a href="#contacts" class="footer-link">Контакты</a>
+        </nav>
+
+        <div class="text-sm text-white/55">
+          <p>ИП Назаров Александр Сергеевич</p>
+          <p class="mt-2">ИНН 525714908844</p>
+          <p class="mt-2">ОГРНИП 322527500096924</p>
+        </div>
+      </div>
+
+      <div class="mt-12 border-t border-white/10 pt-6 text-xs text-white/30">
+        © 2026 БРОКЕР-БТ. Все права защищены.
+      </div>
+    </div>
+  </footer>
+
+  <!-- OFFER MODAL -->
+  <div id="offer-modal" class="pointer-events-none fixed inset-0 z-[100] flex items-center justify-center p-5 opacity-0 transition-opacity duration-300" aria-hidden="true">
+    <div class="modal-backdrop absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+
+    <div class="modal-panel relative max-h-[90vh] w-full max-w-2xl translate-y-5 overflow-auto rounded-2xl bg-white p-7 text-neutral-900 shadow-2xl transition-transform duration-300 sm:p-10">
+      <button id="modal-close" type="button" class="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full bg-neutral-100 text-xl hover:bg-neutral-200" aria-label="Закрыть">×</button>
+
+      <p id="modal-kicker" class="text-xs uppercase tracking-[0.2em] text-neutral-400"></p>
+      <h3 id="modal-title" class="mt-3 pr-10 text-3xl font-semibold tracking-[-0.03em]"></h3>
+      <p id="modal-description" class="mt-5 leading-relaxed text-neutral-600"></p>
+
+      <a href="#contacts" id="modal-contact" class="mt-8 inline-flex rounded-full bg-neutral-900 px-6 py-3 text-sm font-semibold text-white">
+        Обсудить предложение ↗
+      </a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

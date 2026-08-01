@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#262626"/>
+  <circle cx="400" cy="330" r="130" fill="#444"/>
+  <rect x="190" y="500" width="420" height="360" rx="120" fill="#444"/>
+  <text x="400" y="930" text-anchor="middle" fill="#999" font-family="Arial" font-size="28">PHOTO</text>
+</svg>
